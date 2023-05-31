@@ -107,7 +107,6 @@ const Post = (props) => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log('Новый комментарий создан:', data);
                 const updatedComments = [...comments, data];
                 props.updatePost(props.post.id, {comments: updatedComments});
 
@@ -134,7 +133,6 @@ const Post = (props) => {
                 throw new Error('Network response was not ok.');
             })
             .then(updatedComment => {
-                console.log("обновление comment", updatedComment);
                 setComments(prevComments =>
                     prevComments.map(comment =>
                         comment.id === updatedComment.id
@@ -164,7 +162,6 @@ const Post = (props) => {
                 throw new Error('Network response was not ok.');
             })
             .then(deletedComment => {
-                console.log("удаление поста ", deletedComment);
                 setComments(prevComments => prevComments.filter(comment => comment.id !== deletedComment.id));
             })
             .catch(error => {
@@ -172,7 +169,6 @@ const Post = (props) => {
             });
     }
     const handleAllComments = () => {
-        console.log('all comments нажата кнопка')
         setIsAllComment(!isAllComment);
     };
     const formatDate = (dateString) => {
@@ -204,8 +200,6 @@ const Post = (props) => {
                     throw new Error('Network response was not ok.');
                 })
                 .then((data) => {
-                    console.log('Image uploaded:', data);
-                    console.log(data.result.imageSrc)
                     setImageSrc(data.result.imageSrc);
                     props.updatePost(postId, {imageSrc: data.result.imageSrc});
 

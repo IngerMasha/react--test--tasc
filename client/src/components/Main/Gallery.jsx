@@ -29,7 +29,6 @@ const Gallery = () => {
                 throw new Error('Network response was not ok.');
             })
             .then(newPost => {
-                console.log("новый пост", newPost);
                 setPosts(prevPosts => [...prevPosts, newPost]);
                 getAllPosts()
             })
@@ -48,7 +47,6 @@ const Gallery = () => {
                 throw new Error('Network response was not ok.');
             })
             .then(deletedPost => {
-                console.log("удаление поста ", deletedPost);
                 setPosts(prevPosts => prevPosts.filter(post => post.id !== deletedPost.id));
                 getAllPosts()
             })
@@ -72,7 +70,6 @@ const Gallery = () => {
                 throw new Error('Network response was not ok.');
             })
             .then(updatedPost => {
-                console.log("обновление поста", updatedPost);
                 setPosts(prevPosts =>
                     prevPosts.map(post =>
                         post.id === updatedPost.id
@@ -103,7 +100,6 @@ const Gallery = () => {
             })
             .then(Posts=>{
                 setAllPosts(Posts.result)
-                console.log(Posts.result)
 
             })
             .catch(error => {
@@ -151,7 +147,6 @@ const Gallery = () => {
                 throw new Error('Network response was not ok.');
             })
             .then(posts => {
-                console.log("Filtered posts: ", posts);
                 setAllPosts(posts.result)
             })
             .catch(error => {

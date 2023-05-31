@@ -47,7 +47,6 @@ const Comment = (props) => {
                 dislikes: [...props.comment.dislikes, userLogin]
             });
         }
-        console.log('dislike',dislike)
 
     };
     function handleLikeButton() {
@@ -69,7 +68,6 @@ const Comment = (props) => {
                 dislikes: props.comment.dislikes.filter(user => user !== userLogin)
             });
         }
-        console.log('like',like)
 
     };
     function handleCancelChangeComment(){
