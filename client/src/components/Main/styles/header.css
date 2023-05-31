@@ -1,0 +1,38 @@
+.logOutSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logOutSection p{
+    font-size: 18px;
+    margin-right:15px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    /*padding: 1em;*/
+    padding: 0.7em 1.7em;
+
+    background-color: white;
+    box-shadow: 13px 13px 100px #969696,
+    -13px -13px 100px #ffffff;
+}
+
+.logOutSection button{
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    /*border-radius: 0.5em;*/
+    border-radius: 15px;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    /*box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;*/
+    box-shadow: 13px 13px 100px #969696, -13px -13px 100px #ffffff;
+
+}
+
+.logOutSection button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+    inset -4px -4px 12px #ffffff;
+}

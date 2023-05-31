@@ -1,0 +1,23 @@
+.comment {
+    box-shadow: 0px 0px 20px 6px #959090, -13px -13px 100px #ffffff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.headButtonsSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.comment p{
+    font-size: 18px;
+    /*margin-right: 15px;*/
+    border: none;
+    outline: none;
+    /*border-radius: 15px;*/
+    /*padding: 15px;*/
+    background-color: white;
+    box-shadow: 13px 13px 100px #969696,
+    -13px -13px 100px #ffffff;
+}
